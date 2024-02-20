@@ -12,7 +12,7 @@ const Main = () => {
   const [user, setUser] = useState("user" as string);
   const { data, error } = useQuery<GetMessagesQuery>(GET_MESSAGES, {
     fetchPolicy: "cache-and-network",
-    pollInterval: 1000,
+    pollInterval: 500,
   });
   const [postMessage] = useMutation<PostMessageMutation>(POST_MESSAGE);
 
